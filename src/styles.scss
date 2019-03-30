@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/fonts/WhaleITried-TTF.ttf';
+
+@font-face {
+    font-family: whale_i_tried;
+    src: url('./assets/fonts/WhaleITried-TTF.ttf') format("opentype");
+  }
+
+.center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    font-family: whale_i_tried
+}

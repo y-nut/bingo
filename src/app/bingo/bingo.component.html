@@ -1,0 +1,37 @@
+<div class="container " style="margin-top:20px;">
+  <div class="column center-center">
+  <ng-container *ngIf="BINGO">
+    <ng-container *ngFor="let bingoPlateObj of BINGO; let isOdd = odd; let i = index">
+      
+      <table class="table table-bordered " [ngClass]="{'offset-1' : isOdd}"  >
+        <tbody>
+          <ng-container *ngFor="let rKey of getKeys(bingoPlateObj)">
+            <tr>
+              <ng-container *ngFor="let word of bingoPlateObj[rKey].c ">
+                <td >
+                  <span class="center-center">
+                      {{
+                      word 
+                    }}
+                  </span>
+  
+                </td>
+  
+              </ng-container>
+            </tr>
+  
+          </ng-container>
+        </tbody>
+  
+          
+      </table>
+
+    </ng-container>
+  </ng-container>
+
+
+  
+
+</div>  
+</div>
+
