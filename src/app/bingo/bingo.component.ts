@@ -82,14 +82,16 @@ export class BingoComponent implements OnInit {
   
     while (n < nPlates){ 
       let plateObj = {}
+      let nWords = t.words.slice();
+      if (numbers.rows * numbers.cols > nWords.length) return alert("not sufficient words!);
       for (let r = 0; r < numbers.rows; r++) {
           let rObj = {
             c: []
           };
           for (let c = 0; c < numbers.cols; c++) {
-            const random = Math.floor(Math.random() * t.words.length);
-            const word = t.words[random]
-            //rArr.push(word)
+            const random = Math.floor(Math.random() * nWords.length);
+            const word = nWords[random]
+            nWords = nWords.splice(random,1);
             rObj.c.push(word)
           }
           plateObj[r] = rObj
