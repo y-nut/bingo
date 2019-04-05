@@ -11,6 +11,11 @@ td {
 }
 
 table {
+    height: 100mm;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+/*
     width:250mm;
     height: 100mm;
     margin-top: 10px;
@@ -18,9 +23,19 @@ table {
     margin-left: auto;
     margin-right: auto;
     //position: absolute;
+*/
 }
+
+
 
 .column {
     display: flex;
     flex-direction: column;
+}
+
+
+@media print {
+    .break {
+        page-break-after: always;
+    }
 }
