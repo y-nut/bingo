@@ -6,7 +6,7 @@
     
     <ng-container *ngFor="let bingoPlateObj of BINGO; let isOdd = odd; let i = index">
 
-      <table class="table table-bordered " [ngClass]="{'break': isOdd}"  >
+      <!--table class="table table-bordered " [ngClass]="{'break': isOdd}"  >
         
         <tbody>
 
@@ -30,7 +30,46 @@
         </tbody>
   
           
-      </table>
+      </table-->
+
+      <div class="frame center-center column">
+
+
+        <div style="width:100%;" class="row center-center" >
+          <img class="icon mirror-horizontal" src="./assets/img/papera4-elephant-single.png" alt="" >
+          <span class="header">Baby Bingo</span>
+          <img class="icon" src="./assets/img/papera4-elephant-single.png" alt="">
+        </div>
+
+        <ng-container *ngFor="let rKey of getKeys(bingoPlateObj)">
+          <div class="crow">
+              <ng-container *ngFor="let word of bingoPlateObj[rKey].c ">
+                <div class="crow" style="margin: 5px;">
+
+
+                    <mat-card>
+                      <mat-card-content style="width:100%;height:100%;">
+                        <div style="width:100%;height:100%;" class="center-center">
+                            <span class="center-center txt" style="text-align: center;">
+                                {{
+                                word 
+                              }}
+                            </span>
+                        </div>
+
+
+                      </mat-card-content>
+                    </mat-card>
+                </div>
+              </ng-container>
+          </div>
+        </ng-container>
+
+        <div style="width:100%;text-align:center;">
+            <span class="header">Liam Thomsen</span>
+          </div>
+
+      </div>
 
     </ng-container>
   </ng-container>

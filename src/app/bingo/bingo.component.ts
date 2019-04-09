@@ -16,7 +16,7 @@ export class BingoComponent implements OnInit {
 
   BINGO;
 
-  nPlates: number = 3;
+  nPlates: number = 4;
   bingoRows: number = 3;
   bingoCols: number = 3;
 
